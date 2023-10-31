@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculadora IMC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <img src="assets\IMC.jpg" class="img-fluid" style="width: max-width;">
+    <br><br>
+    <div class="container" id="">
+      <h4>¿Qué es el IMC y por qué en tan importante?</h4>
+      <p>El Índice de Masa Corporal, o IMC, es una medida que se utiliza para evaluar si una persona tiene un peso saludable en relación con su altura. Su importancia radica en que puede ayudar a identificar si
+         una persona tiene un peso por debajo o por encima de lo que se considera saludable. El IMC es una herramienta sencilla y ampliamente utilizada para determinar si alguien tiene un riesgo mayor de problemas
+         de salud relacionados con el peso, como enfermedades cardiovasculares, diabetes o presión arterial alta.</p>
+      <h4>¿Como se calcula?</h4>
+      <p>Para calcular el IMC, simplemente sigues estos pasos:</p>
+      <p>1. Pesa tu cuerpo en kilogramos.</p>
+      <p>2. Mide tu altura en metros.</p>
+      <p>3. Luego, utiliza la siguiente fórmula: IMC = Peso (kg) / (Altura (m) * Altura (m))</p>
+    </div>
+    <div class="container" id="tendencias">
+        <div class="row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Tendencia en Adultos</h5>
+                  <p class="card-text">Las tendencias y valores para adultos son aplicables en todo el mundo y son ampliamente aceptadas como una forma general de evaluar
+                     el peso y la salud, excluyendo a niños y adolescentes. Las categorías de IMC para adultos, según las pautas de la Organización Mundial de la Salud (OMS) y muchas organizaciones de salud a nivel mundial, son las siguientes:</p>
+                  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#IMCAD" aria-expanded="false" aria-controls="collapseIMCAD">
+                    Ver valores
+                  </button>
+                  <div class="collapse" id="IMCAD">
+                    <div class="card card-body">
+                      <img src="assets\IMCAdultos.jpg" style="width: 480px;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Tendencia en Niños y Jóvenes</h5>
+                  <p class="card-text">El IMC para niños y adolescentes se calcula de manera diferente a la de adultos, ya que los cuerpos de los niños cambian a medida que crecen.
+                     Para evaluar el IMC en niños y adolescentes, se utilizan percentiles en lugar de categorías fijas como en adultos. Los percentiles comparan el IMC de un niño o adolescente con los de otros
+                     de la misma edad y sexo.</p>
+                  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#IMCNI" aria-expanded="false" aria-controls="collapseIMCNI">
+                    Ver valores
+                  </button>
+                  <div class="collapse" id="IMCNI">
+                    <div>
+                      <img src="assets\TendenciasNyA.jpg" style="width: 510px;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="fluid-container calculadora">
+      <br>
+      <h3>¡Calcula tu IMC!</h3>
+      <div class="container">
+        <form class="row g-3">
+            <div class="col-auto">
+                <label for="peso" class="form-label">Peso (kg)</label>
+                <input class="form-control" id="peso">
+            </div>
+            <div class="col-auto">
+                <label for="altura" class="form-label">Altura (cm)</label>
+                <input class="form-control" id="altura">
+            </div>
+            <div class="d-grid gap-2 d-md-block">
+              <button type="button" class="btn btn-primary" onclick="operacion()">Calcular</button>
+            </div>
+        </form>
+        <br>
+        <div id="resultado"></div>
+        <br>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="container condicion">
+        <div id="condicion"></div>
+        <div class="listaimagenes">
+          <img class="Tacometro1" id="Tacometro1" src="assets\Tacometro1.jpg">
+          <img class="Tacometro2" id="Tacometro2" src="assets\Tacometro2.jpg">
+          <img class="Tacometro3" id="Tacometro3" src="assets\Tacometro3.jpg">
+          <img class="Tacometro4" id="Tacometro4" src="assets\Tacometro4.jpg">
+          <img class="Tacometro5" id="Tacometro5" src="assets\Tacometro5.jpg">
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="referencias">
+      <div class="fluid-container calculadora">
+        <br>
+        <div class="container">
+          <h2>Referencias</h2>
+          <br>
+          <h5>Obesidad y sobrepeso.</h5> 
+          <p>Organización Mundial de la Salud (OMS)</p>
+          <a href="https://www.who.int/es/news-room/fact-sheets/detail/obesity-and-overweight">Ir a la ruta</a>
+          <br><br>
+          <h5>Acerca del IMC para Adultos.</h5> 
+          <p>Centro para el Control y la Prevención de Enfermedades</p>
+          <a href="https://www.cdc.gov/healthyweight/spanish/assessing/bmi/adult_bmi/index.html#:~:text=La%20prevalencia%20de%20un%20IMC,de%2060%20a%C3%B1os%20o%20m%C3%A1s">Ir a la ruta</a>
+        <br>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

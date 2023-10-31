@@ -1,0 +1,31 @@
+.calculadora{
+    background-color: black;
+    color: white;
+}
+.imagenes{
+    display: flex;
+}
+h1{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+.listaimagenes{
+    padding-left: 260px;
+}
+.Tacometro1{
+    display: none;
+}
+.Tacometro2{
+    display: none;
+}
+.Tacometro3{
+    display: none;
+}
+.Tacometro4{
+    display: none;
+}
+.Tacometro5{
+    display: none;
+}
